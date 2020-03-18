@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .input {
+            margin: 5px;
+            height: 30px;
+            width: 178px;
+            font-size: 30px;
+        }
+
+        .button {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            margin: 2px;
+        }
+
+        .result {
+            font-size: 30px;
+            margin: 2px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calc">
+        <input class="input" type="text" placeholder="Nr 1" name="Nr1">
+        <br>
+        <input class="input" type="text" placeholder="Nr 2" name="Nr2">
+        <table>
+            td>*10
+            <td><input class="button" type="button" value="+" onclick="plus()"></td>
+            <td><input class="button" type="button" value="-" onclick="minus()"></td>
+            <td><input class="button" type="button" value="*" onclick="product()"></td>
+            <td><input class="button" type="button" value="/" onclick="divide()"></td>
+        </table>
+        <div class="result" id=Result></div>
+    </form>
+    <!-- Senne Bels s113726-->
+        <script>
+            function plus() {
+                var nr1, nr2, result;
+                nr1 = Number(document.calc.Nr1.value)
+                nr2 = Number(document.calc.Nr2.value)
+                result = nr1+nr2;
+                document.querySelector("#Result").innerHTML = result;
+            }
+
+            function minus() {
+                var nr1, nr2, result;
+                nr1 = Number(document.calc.Nr1.value)
+                nr2 = Number(document.calc.Nr2.value)
+                result = nr1-nr2;
+                document.querySelector("#Result").innerHTML = result;
+            }
+
+            function product() {
+                var nr1, nr2, result;
+                nr1 = Number(document.calc.Nr1.value)
+                nr2 = Number(document.calc.Nr2.value)
+                result = nr1*nr2;
+                document.querySelector("#Result").innerHTML = result;
+            }
+
+            function divide() {
+                var nr1, nr2, result;
+                nr1 = Number(document.calc.Nr1.value)
+                nr2 = Number(document.calc.Nr2.value)
+                result = nr1/nr2;
+                document.querySelector("#Result").innerHTML = result;
+            }
+        </script>
+    </table>
+</body>
+</html>
